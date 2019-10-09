@@ -265,7 +265,12 @@ function switchPlayers(playerNum)
 	document.getElementById("player_img").alt = players[count].alt;
 	document.getElementById("player_img").src = players[count].img;
 	
+	
 
+	document.getElementById("avg_p_yards").innerHTML = Math.round(pass_yards/games_played);
+	document.getElementById("avg_r_yards").innerHTML = Math.round(rushing_yards/games_played);
+	document.getElementById("avg_rec_yards").innerHTML = Math.round(receiving_yards/games_played);
+	
 	if (count < players.length-1)
 	{
 		count=1+count;
@@ -274,13 +279,6 @@ function switchPlayers(playerNum)
 	{
 		count=0;
 	}
-
-	
-
-
-
-
-
 
 
 
